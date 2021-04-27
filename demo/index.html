@@ -1,45 +1,39 @@
-  
-<!DOCTYPE html>
-<html>
-  <head>
-    
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  background-color: black;
-  font-family: cursive;
-}
-
-.glow {
-  font-size: 80px;
-  color: #fff;
-  text-align: center;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}
-</style>
-    
-    
-   
-    <title>
-    DEMO PAGE
-    </title>
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
   </head>
   <body>
-    <a href="littleprinceindex.html">
- <h1 class="glow">Press here to see the story of the Little Prince</h1>
-    </a>
-      </body>
+    <script>
+    
+      let img;
+function preload() {
+  img = loadImage('img/little_prince.png');
+}
+function setup() {
+  createCanvas(400, 400);
+  image(img, 0, 0, 400, 400);
+}
+
+
+
+    </script>
+    
+    <a href="index1.html" class="link">Tap here to continue</a>
+   
+    <h4 class="index">
+    Once upon a time, there was a little prince who lived in a very small world.
+      <hr>The world was inhabited only by the prince and a rose. The prince loved the
+      <hr> rose very much and cared for it madly. But little by little the rose asked the
+      <hr> prince for more things and more care. Not knowing what to do, the little
+      <hr> prince decided to explore other worlds, leaving the rose alone.
+    
+    
+    </h4>
+    
   
 
-</html>
+
+
+</body></html>
