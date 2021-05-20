@@ -7,6 +7,55 @@
     </title>
   </head>
   <body>
-    gtjgntngtkngitrgn5krngintrigni4n5i4niny564ntign65thgnjytnhgi5nytkhnktnhgtnggk
+  <p> I always like the good lighting in my room. I recently bought a strip light from Ikea. they worked pretty well but every time I want it to turn on, I have to do it manually as any light. Nothing wrong with that but How about if I make a project that turns the light for me and that is actually what I did.
+The light strip still the same I haven't change anything. The light comes with a switch and a 12 V power supply, which is pretty safe compared to the 120 V of a regular lamp. </p>
+
+    <p>Things that use:</p>
+
+    <p>Relay (a relay module can work from 220 V and lower)</p>
+<p>Arduino Uno</p>
+<p>Cables </p>
+<p>Double-sided PCB board</p>
+<p>Ultrasonic sensor</p>
+
+<p>After I connected everything using a regular breadboard, I then transferred all the wires to the PCB board and soldered them. After the setup was done I used some double-sided tape to mount it below my desk, then I uploaded the code to the Arduino.</p>
+
+
+const int trigPin = 6; 
+const int echoPin = 5;
+long duration;
+int distance;
+void setup() {
+pinMode (9,OUTPUT);
+pinMode (trigPin,OUTPUT);
+pinMode (echoPin,INPUT);
+Serial.begin(57600);
+}
+
+void loop() {
+digitalWrite(trigPin,LOW);
+delayMicroseconds (2);
+digitalWrite(trigPin,HIGH);
+delayMicroseconds (2);
+digitalWrite(trigPin,LOW);
+duration = pulseIn(echoPin,HIGH);
+digitalWrite(trigPin,HIGH);
+ 
+distance = duration*0.034/2;
+Serial.print("Distance: ");
+Serial.println(distance);
+if (distance <=60)
+{
+   
+digitalWrite(9,HIGH);
+delay(500);
+}
+else
+{
+digitalWrite(9,LOW);
+delay(500);
+}
+}
+
   </body>
 </html>
