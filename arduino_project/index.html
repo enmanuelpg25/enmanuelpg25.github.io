@@ -26,7 +26,7 @@ The light strip still the same I haven't change anything. The light comes with a
 
 
 }
-<p1>
+<p>
 const int trigPin = 6; 
 const int echoPin = 5;
 long duration;
@@ -37,8 +37,6 @@ pinMode (trigPin,OUTPUT);
 pinMode (echoPin,INPUT);
 Serial.begin(57600);
 } 
-
-
 void loop() {
 digitalWrite(trigPin,LOW);
 delayMicroseconds (2);
@@ -60,7 +58,7 @@ delay(500);
 else
 {
 digitalWrite(9,LOW);
-                  delay(500);</p1>
+                  delay(500);</p>
 }
 } 
 
