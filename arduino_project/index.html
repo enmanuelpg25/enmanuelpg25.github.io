@@ -7,7 +7,8 @@
     </title>
   </head>
   <body>
-  <p> I always like the good lighting in my room. I recently bought a strip light from Ikea. they worked pretty well but every time I want it to turn on, I have to do it manually as any light. Nothing wrong with that but How about if I make a project that turns the light for me and that is actually what I did.
+  <p> I always like the good lighting in my room. I recently bought a strip light from Ikea. they worked pretty well but every time I want it to turn on, I have to do it manually as any light.
+    <hr>Nothing wrong with that but How about if I make a project that turns the light for me and that is actually what I did.</hr>
 The light strip still the same I haven't change anything. The light comes with a switch and a 12 V power supply, which is pretty safe compared to the 120 V of a regular lamp. </p>
 
     <p>Things that use:</p>
@@ -18,9 +19,10 @@ The light strip still the same I haven't change anything. The light comes with a
 <p>Double-sided PCB board</p>
 <p>Ultrasonic sensor</p>
 
-<p>After I connected everything using a regular breadboard, I then transferred all the wires to the PCB board and soldered them. After the setup was done I used some double-sided tape to mount it below my desk, then I uploaded the code to the Arduino.</p>
+<p>After I connected everything using a regular breadboard, I then transferred all the wires to the PCB board and soldered them. 
+  <hr>After the setup was done I used some double-sided tape to mount it below my desk, then I uploaded the code to the Arduino.</hr></p>
 
-
+<hr>
 const int trigPin = 6; 
 const int echoPin = 5;
 long duration;
@@ -29,9 +31,10 @@ void setup() {
 pinMode (9,OUTPUT);
 pinMode (trigPin,OUTPUT);
 pinMode (echoPin,INPUT);
-Serial.begin(57600);
-}
+Serial.begin(57600);</hr>
+} 
 
+<hr>
 void loop() {
 digitalWrite(trigPin,LOW);
 delayMicroseconds (2);
@@ -39,8 +42,8 @@ digitalWrite(trigPin,HIGH);
 delayMicroseconds (2);
 digitalWrite(trigPin,LOW);
 duration = pulseIn(echoPin,HIGH);
-digitalWrite(trigPin,HIGH);
- 
+digitalWrite(trigPin,HIGH);</hr>
+<hr> 
 distance = duration*0.034/2;
 Serial.print("Distance: ");
 Serial.println(distance);
@@ -53,9 +56,9 @@ delay(500);
 else
 {
 digitalWrite(9,LOW);
-delay(500);
+delay(500);</hr>
 }
-}
+} 
 
   </body>
 </html>
