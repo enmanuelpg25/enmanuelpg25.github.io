@@ -1,6 +1,7 @@
 
   body {
     padding-left: 11em;
+    padding-right: 11em;
     font-family: Georgia, "Times New Roman",
           Times, serif;
     color: purple;
@@ -14,8 +15,4 @@
     font-family: Helvetica, Geneva, Arial,
           SunSans-Regular, sans-serif }
 
-p {
- text-align: center;
-line-height: 100px;
 
-}
